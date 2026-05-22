@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Músculo de Cristo: una experiencia cinematográfica de fe, disciplina, resistencia y propósito."
+      content="Músculo de Cristo: música, devocionales, visión y plataformas para una vida de fe, disciplina y resistencia."
     />
     <title>Músculo de Cristo</title>
     <link rel="stylesheet" href="styles.css" />
@@ -22,9 +22,12 @@
       </a>
 
       <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#manifesto">Manifiesto</a>
-        <a href="#release">Audio</a>
-        <a href="#mensajes">Mensajes</a>
+        <a href="#musica">Música</a>
+        <a href="#devocionales">Devocionales</a>
+        <a href="#merch">Merch</a>
+        <a href="#vision">Visión</a>
+        <a href="#plataformas">Plataformas</a>
+        <a href="#social">Social</a>
       </nav>
     </header>
 
@@ -42,109 +45,228 @@
           </div>
 
           <div class="hero__actions" aria-label="Acciones principales">
-            <a class="button button--primary" href="#release">ESCUCHAR AHORA</a>
-            <a class="button button--ghost" href="#manifesto">ENTRAR AL MOVIMIENTO</a>
+            <a class="button button--primary" href="#musica">ESCUCHAR AHORA</a>
+            <a class="button button--ghost" href="#vision">ENTRAR AL MOVIMIENTO</a>
           </div>
         </div>
       </section>
 
-      <section class="manifesto scene" id="manifesto" aria-labelledby="manifesto-title">
-        <div class="scene__inner manifesto__inner reveal">
-          <p class="kicker">Manifiesto</p>
-          <h2 id="manifesto-title">Esto no es motivación. Es llamado.</h2>
-
-          <div class="manifesto__lines" aria-label="Manifiesto de Músculo de Cristo">
-            <p>La fe también se entrena.</p>
-            <p>La mente también se disciplina.</p>
-            <p>El espíritu también se fortalece.</p>
-            <p>Levántate.</p>
-            <p>Respira.</p>
-            <p>Pelea.</p>
-          </div>
-
-          <p class="manifesto__closing">Cristo es la fuerza. Nosotros el músculo.</p>
-        </div>
-      </section>
-
-      <section class="release scene scene--dark" id="release" aria-labelledby="release-title">
+      <section class="scene section-music" id="musica" aria-labelledby="music-title">
         <div class="scene__inner reveal">
-          <p class="kicker">Featured release</p>
-          <article class="release-card" aria-label="Audio destacado NO ME RINDO">
-            <div class="release-card__visual" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+          <p class="kicker">Música</p>
+          <div class="section-heading">
+            <h2 id="music-title">Sonido para la batalla interior.</h2>
+            <p>
+              Canciones, spoken word y experiencias cinematográficas para
+              detenerte, respirar y volver a pelear con propósito.
+            </p>
+          </div>
 
-            <div class="release-card__body">
-              <h2 id="release-title">NO ME RINDO</h2>
-              <p>
-                Para los días en que nadie ve la carga, pero Dios sigue formando
-                carácter en silencio.
-              </p>
-
-              <audio class="native-audio" controls preload="metadata">
-                <source src="assets/audio/no-me-rindo.mp3" type="audio/mpeg" />
-                Tu navegador no soporta el reproductor de audio.
-              </audio>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="messages scene" id="mensajes" aria-labelledby="messages-title">
-        <div class="scene__inner reveal">
-          <p class="kicker">Mensajes</p>
-          <h2 id="messages-title">Órdenes para el alma cansada.</h2>
-
-          <div class="message-grid">
-            <article class="message-card">
-              <h3>PÁRATE</h3>
+          <div class="release-grid">
+            <article class="media-card media-card--featured">
+              <div class="media-card__art media-card__art--audio" aria-hidden="true">
+                <span>01</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Motivational track</span>
+                  <time datetime="PT3M42S">3:42</time>
+                </div>
+                <h3>NO ME RINDO</h3>
+                <p>
+                  Para los días en que nadie ve la carga, pero Dios sigue
+                  formando carácter en silencio.
+                </p>
+                <audio class="native-audio" controls preload="metadata">
+                  <source src="assets/audio/no-me-rindo.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta el reproductor de audio.
+                </audio>
+              </div>
             </article>
-            <article class="message-card">
-              <h3>RESPIRA Y SIGUE</h3>
+
+            <article class="media-card">
+              <div class="media-card__art media-card__art--spoken" aria-hidden="true">
+                <span>02</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Spoken word</span>
+                  <time>Próximamente</time>
+                </div>
+                <h3>Antes del amanecer</h3>
+                <p>Una declaración para entrenar la mente antes de que empiece el ruido.</p>
+              </div>
             </article>
-            <article class="message-card">
-              <h3>RESISTE</h3>
-            </article>
-            <article class="message-card">
-              <h3>DISCIPLINA</h3>
+
+            <article class="media-card">
+              <div class="media-card__art media-card__art--cinematic" aria-hidden="true">
+                <span>03</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Cinematic audio</span>
+                  <time>Próximamente</time>
+                </div>
+                <h3>Resistencia</h3>
+                <p>Un paisaje sonoro oscuro para recordar que la fe también aguanta presión.</p>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="devotionals scene scene--stone" aria-labelledby="devotionals-title">
+      <section class="scene scene--stone" id="devocionales" aria-labelledby="devotionals-title">
         <div class="scene__inner reveal">
           <p class="kicker">Devocionales</p>
-          <h2 id="devotionals-title">Disciplina para el espíritu.</h2>
+          <div class="section-heading">
+            <h2 id="devotionals-title">Dirección espiritual para hombres en formación.</h2>
+            <p>
+              Reflexión bíblica, oración y disciplina interior para sostener el
+              alma cuando el cuerpo ya está cansado.
+            </p>
+          </div>
 
-          <div class="devotional-list">
-            <article class="devotional-item">
-              <span>01</span>
-              <h3>La batalla empieza antes del amanecer</h3>
+          <div class="release-grid release-grid--quiet">
+            <article class="media-card devotional-card">
+              <div class="media-card__art devotional-card__art" aria-hidden="true">
+                <span>01</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Reflexión bíblica</span>
+                  <time>8 min</time>
+                </div>
+                <h3>Fe bajo presión</h3>
+                <p>Cuando la prueba no te destruye, te revela.</p>
+              </div>
             </article>
-            <article class="devotional-item">
-              <span>02</span>
-              <h3>Disciplina cuando nadie mira</h3>
+
+            <article class="media-card devotional-card">
+              <div class="media-card__art devotional-card__art" aria-hidden="true">
+                <span>02</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Oración</span>
+                  <time>6 min</time>
+                </div>
+                <h3>Señor, vuelve a levantarme</h3>
+                <p>Una oración para volver al centro cuando la mente está en guerra.</p>
+              </div>
             </article>
-            <article class="devotional-item">
-              <span>03</span>
-              <h3>Fe bajo presión</h3>
-            </article>
-            <article class="devotional-item">
-              <span>04</span>
-              <h3>Resistencia en silencio</h3>
+
+            <article class="media-card devotional-card">
+              <div class="media-card__art devotional-card__art" aria-hidden="true">
+                <span>03</span>
+              </div>
+              <div class="media-card__content">
+                <div class="media-card__meta">
+                  <span>Dirección espiritual</span>
+                  <time>10 min</time>
+                </div>
+                <h3>Disciplina en lo secreto</h3>
+                <p>Lo que nadie aplaude también puede ser altar.</p>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="closing scene scene--dark" aria-labelledby="closing-title">
+      <section class="scene merch-section" id="merch" aria-labelledby="merch-title">
         <div class="scene__inner reveal">
-          <p class="kicker">Sigue caminando</p>
-          <h2 id="closing-title">Dios no terminó contigo.</h2>
+          <p class="kicker">Merch</p>
+          <div class="merch-panel">
+            <div>
+              <h2 id="merch-title">Armadura para la disciplina diaria.</h2>
+              <p>
+                Hoodies, gym wear y piezas oscuras con estética warrior para
+                entrenar, resistir y cargar el mensaje sin decir demasiado.
+              </p>
+            </div>
+
+            <div class="merch-mockups" aria-label="Vista previa de mercancía futura">
+              <article>
+                <span>Hoodies</span>
+                <strong>Próximamente</strong>
+              </article>
+              <article>
+                <span>Gym wear</span>
+                <strong>Próximamente</strong>
+              </article>
+              <article>
+                <span>Warrior essentials</span>
+                <strong>Próximamente</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene vision-section" id="vision" aria-labelledby="vision-title">
+        <div class="scene__inner vision-grid reveal">
+          <div>
+            <p class="kicker">Visión</p>
+            <h2 id="vision-title">MDC es una llamada a despertar.</h2>
+          </div>
+
+          <div class="vision-copy">
+            <p>
+              Músculo de Cristo no es una marca de motivación ni una estética de
+              gimnasio. Es una plataforma para hombres y mujeres que entienden
+              que la fe también exige formación.
+            </p>
+            <p>
+              La misión es fortalecer mente, cuerpo y espíritu con disciplina,
+              propósito, resistencia y una vida orientada hacia Dios.
+            </p>
+            <p class="vision-statement">
+              No buscamos ruido. Buscamos carácter. No buscamos apariencia.
+              Buscamos obediencia bajo presión.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene platform-section" id="plataformas" aria-labelledby="platforms-title">
+        <div class="scene__inner reveal">
+          <p class="kicker">Plataformas</p>
+          <div class="section-heading">
+            <h2 id="platforms-title">El movimiento se está expandiendo.</h2>
+            <p>Próximamente en las plataformas donde se entrena el oído y se alimenta el espíritu.</p>
+          </div>
+
+          <div class="icon-grid" aria-label="Plataformas musicales">
+            <article><span>Spotify</span></article>
+            <article><span>Apple Music</span></article>
+            <article><span>Deezer</span></article>
+            <article><span>Amazon Music</span></article>
+            <article><span>YouTube Music</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene social-section" id="social" aria-labelledby="social-title">
+        <div class="scene__inner reveal">
+          <p class="kicker">Social</p>
+          <div class="section-heading">
+            <h2 id="social-title">Sigue la señal.</h2>
+            <p>Contenido, lanzamientos, devocionales y llamados para seguir firme.</p>
+          </div>
+
+          <div class="icon-grid social-grid" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/musculodecristo" target="_blank" rel="noopener noreferrer">
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@musculodecristo" target="_blank" rel="noopener noreferrer">
+              <span>TikTok</span>
+            </a>
+            <a href="https://www.facebook.com/musculodecristo" target="_blank" rel="noopener noreferrer">
+              <span>Facebook</span>
+            </a>
+            <a href="#" aria-label="YouTube de Músculo de Cristo próximamente">
+              <span>YouTube</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>

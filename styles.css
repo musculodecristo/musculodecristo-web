@@ -186,7 +186,7 @@ a {
   display: grid;
   align-items: end;
   padding-top: 7.5rem;
-  padding-bottom: clamp(3.5rem, 9vw, 6.5rem);
+  padding-bottom: clamp(2.5rem, 8vw, 5rem);
   overflow: hidden;
   isolation: isolate;
 }
@@ -196,13 +196,12 @@ a {
   inset: 0;
   z-index: -4;
   background:
-    linear-gradient(90deg, rgba(4, 4, 4, 0.94), rgba(4, 4, 4, 0.44) 48%, rgba(4, 4, 4, 0.78)),
-    linear-gradient(180deg, rgba(4, 4, 4, 0.34), rgba(4, 4, 4, 0.08) 42%, rgba(4, 4, 4, 0.92) 96%),
-    url("assets/images/hero-cinematic.png") 58% center / cover no-repeat,
-    url("assets/images/BannerFacebook.png") center / cover no-repeat,
+    linear-gradient(90deg, rgba(4, 4, 4, 0.2), rgba(4, 4, 4, 0.08) 46%, rgba(4, 4, 4, 0.18)),
+    linear-gradient(180deg, rgba(4, 4, 4, 0.18), rgba(4, 4, 4, 0.02) 42%, rgba(4, 4, 4, 0.86) 96%),
+    url("assets/images/Hero-mdc.png") 52% center / cover no-repeat,
     linear-gradient(135deg, #11100d, #050505 68%);
-  filter: saturate(0.86) contrast(1.14);
-  transform: scale(1.09);
+  filter: saturate(0.9) contrast(1.08);
+  transform: scale(1.035);
   animation: slowDrift 20s ease-in-out infinite alternate;
 }
 
@@ -211,9 +210,10 @@ a {
   inset: 0;
   z-index: -3;
   background:
-    radial-gradient(circle at 63% 43%, rgba(184, 137, 45, 0.3), transparent 13rem),
-    radial-gradient(circle at 63% 43%, transparent 0 13rem, rgba(0, 0, 0, 0.28) 30rem),
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.62) 70%, var(--black));
+    radial-gradient(circle at 64% 44%, rgba(184, 137, 45, 0.14), transparent 14rem),
+    radial-gradient(circle at 64% 44%, transparent 0 14rem, rgba(0, 0, 0, 0.18) 32rem),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5), transparent 40%, rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), transparent 54%, rgba(0, 0, 0, 0.78) 100%);
 }
 
 .hero::after,
@@ -234,13 +234,9 @@ a {
   margin: 0 auto;
 }
 
-.hero__mark {
-  width: 8.5rem;
-  aspect-ratio: 1;
-  border: 1px solid var(--line-gold);
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 52px rgba(184, 137, 45, 0.24), 0 28px 80px rgba(0, 0, 0, 0.48);
+.hero__copy {
+  max-width: 34rem;
+  padding-top: 42svh;
 }
 
 .kicker {
@@ -295,12 +291,21 @@ h3 {
   text-shadow: 0 8px 26px rgba(0, 0, 0, 0.9);
 }
 
+.hero__statement {
+  max-width: 28rem;
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 800;
+  text-shadow: 0 7px 24px rgba(0, 0, 0, 0.9);
+}
+
 .hero__actions {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
   width: min(100%, 27rem);
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 
 .button {
@@ -566,11 +571,11 @@ h3 {
 
 @keyframes slowDrift {
   from {
-    transform: scale(1.09) translate3d(-0.35%, 0, 0);
+    transform: scale(1.035) translate3d(-0.25%, 0, 0);
   }
 
   to {
-    transform: scale(1.12) translate3d(0.35%, -0.45%, 0);
+    transform: scale(1.06) translate3d(0.25%, -0.35%, 0);
   }
 }
 
@@ -611,6 +616,10 @@ h3 {
     font-size: 1.55rem;
   }
 
+  .hero__statement {
+    font-size: 1.1rem;
+  }
+
   .hero__actions {
     flex-direction: row;
     width: auto;
@@ -635,11 +644,37 @@ h3 {
 
 @media (min-width: 840px) {
   .hero {
-    align-items: center;
+    align-items: end;
   }
 
-  .hero__mark {
-    width: 11rem;
+  .hero__background {
+    background:
+      linear-gradient(90deg, rgba(4, 4, 4, 0.08), rgba(4, 4, 4, 0.02) 44%, rgba(4, 4, 4, 0.1)),
+      linear-gradient(180deg, rgba(4, 4, 4, 0.08), transparent 52%, rgba(4, 4, 4, 0.72) 100%),
+      url("assets/images/Hero-mdc.png") center center / cover no-repeat,
+      linear-gradient(135deg, #11100d, #050505 68%);
+  }
+
+  .hero__shade {
+    background:
+      radial-gradient(circle at 63% 43%, rgba(184, 137, 45, 0.1), transparent 15rem),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.04), transparent 56%, rgba(0, 0, 0, 0.78) 100%);
+  }
+
+  .hero__copy {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .hero__actions {
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.6rem;
   }
 
   h1 {

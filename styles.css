@@ -190,11 +190,11 @@ a {
 }
 
 .hero {
-  min-height: 92svh;
+  min-height: 96svh;
   display: grid;
   align-items: end;
-  padding-top: 6.5rem;
-  padding-bottom: 2.75rem;
+  padding-top: 6rem;
+  padding-bottom: 2.5rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -206,10 +206,10 @@ a {
   background:
     linear-gradient(90deg, rgba(4, 4, 4, 0.2), rgba(4, 4, 4, 0.08) 46%, rgba(4, 4, 4, 0.18)),
     linear-gradient(180deg, rgba(4, 4, 4, 0.18), rgba(4, 4, 4, 0.02) 42%, rgba(4, 4, 4, 0.86) 96%),
-    url("assets/images/Hero-mdc.png") 52% center / cover no-repeat,
+    url("assets/images/Hero-mdc.png") 54% center / cover no-repeat,
     linear-gradient(135deg, #11100d, #050505 68%);
   filter: saturate(0.9) contrast(1.08);
-  transform: scale(1.035);
+  transform: scale(1.015);
   animation: slowDrift 20s ease-in-out infinite alternate;
 }
 
@@ -604,8 +604,9 @@ h3 {
 
 .icon-grid article,
 .icon-grid a {
-  min-height: 3.85rem;
+  min-height: 4.75rem;
   display: grid;
+  gap: 0.45rem;
   place-items: center;
   border: 1px solid var(--line);
   background:
@@ -621,6 +622,20 @@ h3 {
     transform 180ms ease,
     border-color 180ms ease,
     background 180ms ease;
+}
+
+.icon-grid svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  fill: none;
+  stroke: var(--gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.icon-grid span {
+  display: block;
 }
 
 .icon-grid article:hover,
@@ -672,11 +687,11 @@ h3 {
 
 @keyframes slowDrift {
   from {
-    transform: scale(1.035) translate3d(-0.25%, 0, 0);
+    transform: scale(1.015) translate3d(-0.15%, 0, 0);
   }
 
   to {
-    transform: scale(1.06) translate3d(0.25%, -0.35%, 0);
+    transform: scale(1.035) translate3d(0.15%, -0.2%, 0);
   }
 }
 
@@ -754,14 +769,14 @@ h3 {
 
   .hero {
     align-items: end;
-    min-height: 92svh;
+    min-height: 96svh;
   }
 
   .hero__background {
     background:
       linear-gradient(90deg, rgba(4, 4, 4, 0.08), rgba(4, 4, 4, 0.02) 44%, rgba(4, 4, 4, 0.1)),
       linear-gradient(180deg, rgba(4, 4, 4, 0.08), transparent 52%, rgba(4, 4, 4, 0.72) 100%),
-      url("assets/images/Hero-mdc.png") center center / cover no-repeat,
+      url("assets/images/Hero-mdc.png") center center / auto 100% no-repeat,
       linear-gradient(135deg, #11100d, #050505 68%);
   }
 

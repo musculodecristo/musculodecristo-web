@@ -365,6 +365,16 @@ h3 {
   font-size: 0.98rem;
 }
 
+.section-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.section-copy .section-subtitle {
+  color: var(--bone);
+  font-weight: 900;
+}
+
 .section-music {
   background:
     radial-gradient(circle at 78% 14%, rgba(184, 137, 45, 0.11), transparent 28rem),
@@ -438,6 +448,55 @@ h3 {
   background:
     radial-gradient(circle at 70% 18%, rgba(184, 137, 45, 0.16), transparent 12rem),
     linear-gradient(180deg, #1a1814, #070706);
+}
+
+.devotional-player {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.65rem;
+  align-items: center;
+  width: 100%;
+  min-height: 3rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(184, 137, 45, 0.24);
+  background:
+    linear-gradient(135deg, rgba(184, 137, 45, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(4, 4, 4, 0.42);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  padding: 0.7rem 0.85rem;
+  text-transform: uppercase;
+}
+
+.devotional-player__icon {
+  position: relative;
+  display: grid;
+  width: 1.85rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(184, 137, 45, 0.34);
+  border-radius: 50%;
+  background: rgba(184, 137, 45, 0.08);
+}
+
+.devotional-player__icon::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 0.12rem;
+  border-block: 0.34rem solid transparent;
+  border-left: 0.52rem solid var(--gold);
+  opacity: 0.55;
+}
+
+.devotional-player.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.86;
+}
+
+.devotional-card.is-ready {
+  border-color: var(--line-gold);
 }
 
 .media-card__content {

@@ -42,3 +42,24 @@ document.querySelectorAll("img").forEach((image) => {
     markMissingImage();
   }
 });
+
+document.querySelectorAll(".devotional-card").forEach((card) => {
+  const audioSource = card.dataset.audioSrc?.trim();
+  const playerSlot = card.querySelector("[data-player]");
+
+  if (!audioSource || !playerSlot) return;
+
+  const audio = document.createElement("audio");
+  const source = document.createElement("source");
+
+  audio.className = "native-audio";
+  audio.controls = true;
+  audio.preload = "metadata";
+  source.src = audioSource;
+  source.type = "audio/mpeg";
+
+  audio.append(source, "Tu navegador no soporta el reproductor de audio.");
+  playerSlot.replaceWith(audio);
+  card.classList.add("is-ready");
+  card.dataset.state = "ready";
+});
